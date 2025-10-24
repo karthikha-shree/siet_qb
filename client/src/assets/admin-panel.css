@@ -1,0 +1,153 @@
+
+.page-containerADMIN {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    font-size: larger;
+    background: #ffffff;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logout-container {
+    margin-top: auto;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .logout-button {
+    background-color: #2349c8 !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    transition: background-color 0.3s ease;
+  }
+
+  .logout-button:hover {
+    background-color: #c82333 !important;
+  }
+  
+  .page-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  
+  .admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  
+    
+  }
+  
+  .admin-table td {
+    padding: 10px;
+    vertical-align: middle;
+  
+  }
+  
+  .admin-table input[type="text"],
+  .admin-table select {
+    padding: 6px;
+    width: 80%;
+    border: 1px solid #080707;
+    border-radius: 4px;
+  }
+  
+  .admin-table button {
+    padding: 6px 32px;
+    margin-right: 20px;
+    background-color: #1b38f4bb;
+    border: none;
+    color: rgb(252, 252, 252);
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+  
+  .admin-table button:hover {
+    background-color: #0056b3;
+  }
+  
+  .admin-table button.semester-btn {
+    
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .admin-table button.semester-btn.selected {
+    background-color: #add8e6;
+    font-weight: bold;
+  }
+  
+  .subjects-table {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .subjects-table th,
+  .subjects-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .subjects-table th {
+    background-color: #f8f8f8;
+  }
+  
+  .subjects-table button {
+    margin: 2px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* File & Action Buttons */
+  button.upload-btn {
+    background-color: #28a745;
+  }
+  
+  button.delete-btn {
+    background-color: #dc3545;
+  }
+  
+  button.edit-btn {
+    background-color: #ffc107;
+    color: #000;
+  }
+  
+  button.save-btn {
+    background-color: #17a2b8;
+  }
+  
+  button.cancel-btn {
+    background-color: #6c757d;
+  }
+  
+  /* File link */
+  .subjects-table a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  .subjects-table a:hover {
+    text-decoration: underline;
+  }
+  button svg {
+    font-size: 16px;
+  }
+  button {
+    padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
