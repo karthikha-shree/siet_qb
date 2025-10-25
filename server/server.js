@@ -19,7 +19,7 @@ cloudinary.config({
 
 app.use('/api/departments', require('./routes/departmentRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
-app.use(cors({ origin: 'https://sietqb.onrender.com', credentials: true }));
+app.use(cors({ origin: 'https://siet-qb-5qpb.vercel.app/', credentials: true }));
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {

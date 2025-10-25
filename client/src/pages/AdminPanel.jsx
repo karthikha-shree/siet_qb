@@ -21,7 +21,7 @@ const AdminPanel = () => {
 
   const token = localStorage.getItem('adminToken');
   const axiosAuth = axios.create({
-    baseURL: 'https://sietqb.onrender.com/api/admin',
+    baseURL: 'https://siet-qb-5qpb.vercel.app/api/admin',
     headers: { Authorization: `Bearer ${token}` }
   });
 
@@ -33,7 +33,7 @@ const AdminPanel = () => {
   const fetchDepartments = async () => {
     try {
       console.log("Fetching departments...");
-      const res = await axios.get('https://sietqb.onrender.com/api/departments');
+      const res = await axios.get('https://siet-qb-5qpb.vercel.app/api/departments');
       setDepartments(res.data);
     } catch (err) {
       console.error('Error fetching departments:', err);
@@ -59,7 +59,7 @@ const AdminPanel = () => {
     setSelectedSem(null);
     try {
       console.log("Fetching regulations for department:", dept.name);
-      const res = await axios.get(`http://:5000/api/departments/${deptId}`);
+      const res = await axios.get(`https://siet-qb-5qpb.vercel.app/api/departments/${deptId}`);
       setRegulations(res.data.regulations);
     } catch (err) {
       console.error('Error fetching regulations:', err);

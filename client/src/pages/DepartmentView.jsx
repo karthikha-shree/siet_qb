@@ -26,7 +26,7 @@ const DepartmentView = () => {
   useEffect(() => {
     const fetchDept = async () => {
       try {
-        const res = await axios.get(`https://sietqb.onrender.com/api/departments/${id}`);
+        const res = await axios.get(`https://siet-qb-5qpb.vercel.app/api/departments/${id}`);
         console.log("API response:", res.data);
         setDepartment(res.data.department || res.data);
         setRegulations(res.data.regulations || res.data.regulations);

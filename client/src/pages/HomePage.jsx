@@ -10,7 +10,7 @@ const HomePage = () => {
   const [departments, setDepartments] = useState([]);
 
   useEffect(() => {
-    axios.get('https://sietqb.onrender.com/api/departments') 
+    axios.get('https://siet-qb-5qpb.vercel.app/api/departments') 
       .then(res => setDepartments(res.data))
       .catch(err => console.error(err));
   }, []);
