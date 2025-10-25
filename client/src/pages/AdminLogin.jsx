@@ -19,7 +19,7 @@ const AdminLogin = ({ setIsLoggedIn }) => {
     e.preventDefault();
     setError('');
     try {
-      const res = await axios.post('http://localhost:5000/api/admin/login', { email, password });
+      const res = await axios.post('https://sietqb.onrender.com/api/admin/login', { email, password });
       
       // Set token and expiry time (1 minute from now)
       const expiryTime = new Date().getTime() + 60000; // Current time + 1 minute in milliseconds

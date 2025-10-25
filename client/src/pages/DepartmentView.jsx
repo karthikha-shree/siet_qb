@@ -26,7 +26,7 @@ const DepartmentView = () => {
   useEffect(() => {
     const fetchDept = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/departments/${id}`);
+        const res = await axios.get(`https://sietqb.onrender.com/api/departments/${id}`);
         console.log("API response:", res.data);
         setDepartment(res.data.department || res.data);
         setRegulations(res.data.regulations || res.data.regulations);

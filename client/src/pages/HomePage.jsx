@@ -10,7 +10,7 @@ const HomePage = () => {
   const [departments, setDepartments] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/departments') 
+    axios.get('https://sietqb.onrender.com/api/departments') 
       .then(res => setDepartments(res.data))
       .catch(err => console.error(err));
   }, []);
