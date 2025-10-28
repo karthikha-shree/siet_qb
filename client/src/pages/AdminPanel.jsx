@@ -32,7 +32,7 @@ const AdminPanel = () => {
 
   const fetchDepartments = async () => {
     try {
-      console.log("Fetching departments...");
+      
       const res = await axios.get('https://siet-qb-5qpb.vercel.app/api/departments');
       setDepartments(res.data);
     } catch (err) {
@@ -43,7 +43,7 @@ const AdminPanel = () => {
   const handleAddDepartment = async () => {
     if (!newDeptName.trim()) return alert('Enter department name');
     try {
-      console.log("Adding department...");
+      
       const res = await axiosAuth.post('/department', { name: newDeptName });
       setDepartments([...departments, res.data]);
       setNewDeptName('');
@@ -58,7 +58,7 @@ const AdminPanel = () => {
     setSelectedReg(null);
     setSelectedSem(null);
     try {
-      console.log("Fetching regulations for department:", dept.name);
+      console.log("Fetching regulations for department");
       const res = await axios.get(`https://siet-qb-5qpb.vercel.app/api/departments/${deptId}`);
       setRegulations(res.data.regulations);
     } catch (err) {
@@ -126,7 +126,7 @@ const AdminPanel = () => {
     const formData = new FormData();
     formData.append('file', file);
     try {
-      console.log("Uploading file to subject:", subjectId);
+      console.log("Uploading file to subject");
       const res = await axiosAuth.post(`/upload/${subjectId}`, formData);
       const updatedSubjects = selectedSem.subjects.map(sub =>
         sub._id === subjectId ? res.data : sub
@@ -139,7 +139,7 @@ const AdminPanel = () => {
 
   const handleDeleteSubject = async (subjectId) => {
     try {
-      console.log("Deleting subject:", subjectId);
+      console.log("Deleting subject");
       await axiosAuth.delete(`/subject/${subjectId}`);
       const updatedSubjects = selectedSem.subjects.filter(sub => sub._id !== subjectId);
       setSelectedSem({ ...selectedSem, subjects: updatedSubjects });
@@ -150,7 +150,7 @@ const AdminPanel = () => {
 
   const handleDeleteFile = async (subjectId, fileUrl) => {
     try {
-      console.log("Deleting file from subject:", subjectId);
+      console.log("Deleting file from subject");
       const res = await axiosAuth.delete(`/file/${subjectId}/${encodeURIComponent(fileUrl)}`);
       
       const updatedSubjects = selectedSem.subjects.map(sub => {

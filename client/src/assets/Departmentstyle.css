@@ -157,6 +157,16 @@
   .view-btn:hover {
     background-color: #dddddd;
   } */
-  .page-containerDP nav {
+  .page-containerDP {
   position: static !important;
+}
+/* Ensure ReactModal overlay stays above everything (like navbar) */
+.ReactModal__Overlay {
+  z-index: 9999 !important;
+}
+
+/* Optional: Center modal properly */
+.ReactModal__Content {
+  z-index: 10000 !important;
+  position: relative;
 }

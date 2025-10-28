@@ -8,7 +8,7 @@ import axios from 'axios';
 import Navbar from '../components/navbar';
 import Footer from '../components/Footer';
 import LogoHeader from '../components/LogoHeader';
-import '../assets/style.css';
+//import '../assets/style.css';
 
 import '../assets/Departmentstyle.css';
 
@@ -27,7 +27,7 @@ const DepartmentView = () => {
     const fetchDept = async () => {
       try {
         const res = await axios.get(`https://siet-qb-5qpb.vercel.app/api/departments/${id}`);
-        console.log("API response:", res.data);
+        
         setDepartment(res.data.department || res.data);
         setRegulations(res.data.regulations || res.data.regulations);
         setLoading(false);
@@ -126,6 +126,10 @@ const DepartmentView = () => {
         onRequestClose={() => setModalOpen(false)}
         contentLabel="PDF Viewer"
         style={{
+          
+    overlay: {
+      zIndex: 9999,
+    },
           content: {
             width: '90%',
             height: '90%',
@@ -135,7 +139,7 @@ const DepartmentView = () => {
       >
         <iframe
           src={`https://docs.google.com/gview?url=${encodeURIComponent(currentFileUrl)}&embedded=true`}
-          width="90%"
+          width="99%"
           height="90%"
           frameBorder="0"
           onContextMenu={(e) => e.preventDefault()}

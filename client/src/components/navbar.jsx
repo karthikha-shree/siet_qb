@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "../assets/style.css";
+//import "../assets/style.css";
 const Navbar = () => (
     <nav>
         
@@ -9,9 +9,9 @@ const Navbar = () => (
            
             <li><a href="https://www.siet.ac.in/" target="_blank" rel="noopener noreferrer">Life@Srishakthi</a></li>
             <li><Link to="/admin-login">Admin Login</Link></li>
+            
            
         </ul>
-        <p>@controlled by examcell</p>
     </nav>
 );
 

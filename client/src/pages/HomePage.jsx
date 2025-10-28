@@ -22,7 +22,7 @@ const HomePage = () => {
 
       <main>
         <h1>QUESTION BANK OF SIET</h1>
-        <h2 style={{ textAlign: 'center' }}>CHOOSE YOUR DEPARTMENT:</h2>
+        <h2 style={{ textAlign: 'center' }}>CHOOSE YOUR DEPARTMENT</h2>
 
         <div className="department-grid">
           {departments.map((dept, index) => (

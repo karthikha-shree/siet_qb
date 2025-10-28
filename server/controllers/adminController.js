@@ -95,7 +95,7 @@ exports.updateSubjectName = async (req, res) => {
     subject.name = req.body.name;
     await subject.save();
 
-    console.log("✅ Subject updated:", subject.name);
+    console.log("✅ Subject updated");
     res.json(subject);
   } catch (err) {
     console.error("❌ Error updating subject:", err);
