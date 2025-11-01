@@ -6,6 +6,7 @@ import '../assets/admin-panel.css';
 import { FaPlus, FaTrash, FaEdit, FaSave, FaTimes, FaUpload, FaSignOutAlt } from 'react-icons/fa';
 import LogoHeader from '../components/LogoHeader';
 import Footer from '../components/Footer';
+import Navbar from '../components/navbar';
 const AdminPanel = () => {
   const [departments, setDepartments] = useState([]);
   const [selectedDept, setSelectedDept] = useState(null);
@@ -178,6 +179,7 @@ const AdminPanel = () => {
   return (
     <div className='page-cointainer'>
       <LogoHeader/>
+      <Navbar />
     <div className="page-containerADMIN">
       <h1 className="admin-title">Admin Panel</h1>
 
